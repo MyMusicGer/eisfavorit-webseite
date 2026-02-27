@@ -430,7 +430,6 @@ function MainContent() {
   const [cardsPerView, setCardsPerView] = useState(3);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const [themeMode, setThemeMode] = useState(1); // 1 = V1, 2 = V2, 3 = V3, 4 = V4
   const [todayDate, setTodayDate] = useState('');
 
   useEffect(() => {
@@ -439,26 +438,9 @@ function MainContent() {
   }, []);
 
   useEffect(() => {
-    // Reset classes
-    document.body.classList.remove('theme-v1', 'theme-v2', 'theme-v3', 'theme-v4', 'theme-v5', 'theme-v6', 'theme-v7');
-
-    // Apply selected theme
-    if (themeMode === 1) {
-      document.body.classList.add('theme-v1');
-    } else if (themeMode === 2) {
-      document.body.classList.add('theme-v2');
-    } else if (themeMode === 3) {
-      document.body.classList.add('theme-v3');
-    } else if (themeMode === 4) {
-      document.body.classList.add('theme-v4');
-    } else if (themeMode === 5) {
-      document.body.classList.add('theme-v5');
-    } else if (themeMode === 6) {
-      document.body.classList.add('theme-v6');
-    } else if (themeMode === 7) {
-      document.body.classList.add('theme-v7');
-    }
-  }, [themeMode]);
+    // Apply V4 theme classes
+    document.body.classList.add('theme-v4');
+  }, []);
 
   useEffect(() => {
     const handleScrollEvent = () => {
@@ -563,7 +545,7 @@ function MainContent() {
   }, []);
 
   return (
-    <div className={`app-container theme-v${themeMode} ${themeMode === 4 ? 'disco-layout' : ''} ${themeMode === 7 ? 'neon-layout' : ''}`}>
+    <div className="app-container theme-v4 disco-layout">
       <DynamicSchema city={city} />
       {/* Ambient Background */}
       <div className="ambient-background">
@@ -598,32 +580,7 @@ function MainContent() {
         </div>
       </nav>
 
-      {/* V2/V3 Theme Toggle Button */}
-      <div style={{ position: 'fixed', bottom: '20px', left: '20px', zIndex: 9999 }}>
-        <button
-          onClick={() => setThemeMode(prev => prev >= 7 ? 1 : prev + 1)}
-          className="btn btn-primary"
-          style={{
-            borderRadius: '50px',
-            padding: '12px 24px',
-            boxShadow: '0 4px 15px rgba(0,0,0,0.2)',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '8px',
-            fontSize: '15px',
-            fontWeight: '600',
-            border: '2px solid white'
-          }}
-        >
-          {themeMode === 1 && '✨ Back to Business (V1)'}
-          {themeMode === 2 && '🌸 Family Mode (V2)'}
-          {themeMode === 3 && '🍦 Pistachio Mode (V3)'}
-          {themeMode === 4 && '🎉 Gelato Disco (V4)'}
-          {themeMode === 5 && '🌙 Midnight Gelato (V5)'}
-          {themeMode === 6 && '🍧 Sorbet Symphony (V6)'}
-          {themeMode === 7 && '🌈 Neon Gelato (V7)'}
-        </button>
-      </div>
+
 
       {/* Hero Image Toggle - Top Right */}
       <div style={{ position: 'fixed', top: '20px', right: '20px', zIndex: 10005 }}>
