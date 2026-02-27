@@ -592,8 +592,8 @@ function MainContent() {
 
 
 
-      {/* Hero Image Toggle - Top Right */}
-      <div style={{ position: 'fixed', top: '20px', right: '20px', zIndex: 10005 }}>
+      {/* Hero Image Toggle - Top Right (desktop only) */}
+      <div className="hero-toggle-btn" style={{ position: 'fixed', top: '20px', right: '20px', zIndex: 10005 }}>
         <button
           onClick={() => setUseHeroV8(!useHeroV8)}
           className="btn"
