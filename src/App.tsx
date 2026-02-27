@@ -7,6 +7,11 @@ import vanille from './assets/eisfavorite-agnello-eis-vanille.png';
 import erdbeer from './assets/eisfavorite-agnello-eis-erdbeer.png';
 import pistazie from './assets/eisfavorite-agnello-eis-pistazie.png';
 import delfino from './assets/eisfavorite-agnello-eis-delfino.png';
+import heroV8 from './assets/eisfavorite-agnello-eiswagen-schloss-v8.jpg';
+import heroOld from './assets/eisfavorite-agnello-catering-schiebeschloss.png';
+import spaghettiVanille from './assets/eisfavorite-agnello-spaghetti-eis-vanille.png';
+import spaghettiSchoko from './assets/eisfavorite-agnello-spaghetti-eis-schoko.png';
+import schokolade from './assets/eisfavorite-agnello-eis-schokolade.jpg';
 
 const TiltCard = ({ children, className = '' }: { children: React.ReactNode, className?: string }) => {
   const cardRef = useRef<HTMLDivElement>(null);
@@ -648,8 +653,8 @@ function MainContent() {
         className="hero"
         style={{
           backgroundImage: useHeroV8
-            ? "url('/eisfavorite-agnello-eiswagen-schloss-v8.jpg')"
-            : "url('/eisfavorite-agnello-catering-schiebeschloss.png')",
+            ? `url(${heroV8})`
+            : `url(${heroOld})`,
           backgroundPosition: useHeroV8 ? 'center bottom' : 'center top'
         }}
       >
@@ -681,7 +686,7 @@ function MainContent() {
               <TiltCard className="specialty-card">
                 <div className="specialty-badge">Premium</div>
                 <div className="flavor-image">
-                  <img src="/eisfavorite-agnello-spaghetti-eis-vanille.png" alt="Spaghetti Eis Vanille mit Erdbeersauce und Kokosraspeln" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'scale(1.4)', objectPosition: 'center 40%' }} />
+                  <img src={spaghettiVanille} alt="Spaghetti Eis Vanille mit Erdbeersauce und Kokosraspeln" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'scale(1.4)', objectPosition: 'center 40%' }} />
                 </div>
                 <h3 className="mb-2">Spaghetti Eis Vanille</h3>
                 <p className="text-secondary">Der Klassiker mit Erdbeersauce &amp; Kokosraspeln</p>
@@ -689,7 +694,7 @@ function MainContent() {
               <TiltCard className="specialty-card">
                 <div className="specialty-badge">Premium</div>
                 <div className="flavor-image">
-                  <img src="/eisfavorite-agnello-spaghetti-eis-schoko.png" alt="Spaghetti Eis Schoko mit feiner Schokoladensauce" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'scale(1.4)', objectPosition: 'center 40%' }} />
+                  <img src={spaghettiSchoko} alt="Spaghetti Eis Schoko mit feiner Schokoladensauce" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'scale(1.4)', objectPosition: 'center 40%' }} />
                 </div>
                 <h3 className="mb-2">Spaghetti Eis Schoko</h3>
                 <p className="text-secondary">Für Schoko-Liebhaber mit feiner Sauce</p>
@@ -702,7 +707,7 @@ function MainContent() {
 
           <div className="grid-container">
             <TiltCard className="grid-item">
-              <div className="flavor-image" style={{ backgroundImage: 'url(/eisfavorite-agnello-eis-schokolade.jpg)', backgroundSize: '190%', backgroundPosition: 'center 48%', backgroundRepeat: 'no-repeat' }} aria-label="Dunkle Schokolade Eis-Kugel"></div>
+              <div className="flavor-image" style={{ backgroundImage: `url(${schokolade})`, backgroundSize: '190%', backgroundPosition: 'center 48%', backgroundRepeat: 'no-repeat' }} aria-label="Dunkle Schokolade Eis-Kugel"></div>
               <h3 className="mb-1">Dunkle Schokolade</h3>
               <p className="text-secondary small">Intensiver Kakao, zartschmelzend &amp; herb</p>
             </TiltCard>

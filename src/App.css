@@ -165,7 +165,7 @@
   text-align: center;
   /* Center text content */
   position: relative;
-  background-image: url('/eisfavorite-agnello-eiswagen-schloss-v8.jpg');
+  background-image: url('./assets/eisfavorite-agnello-eiswagen-schloss-v8.jpg');
   background-size: cover;
   background-position: center bottom;
   padding-top: 18vh;
@@ -227,7 +227,7 @@
 }
 
 .flavor-card[data-flavor="Schokolade"] .flavor-image {
-  background-image: url('/eisfavorite-agnello-eis-schokolade.jpg');
+  background-image: url('./assets/eisfavorite-agnello-eis-schokolade.jpg');
 }
 
 .flavor-card[data-flavor="Pistazie"] .flavor-image {
@@ -497,7 +497,7 @@
 /* Reviews Section with Lifestyle Background */
 #reviews {
   position: relative;
-  background-image: linear-gradient(rgba(28, 26, 23, 0.85), rgba(28, 26, 23, 0.85)), url('/reviews-orderbird.png');
+  background-image: linear-gradient(rgba(28, 26, 23, 0.85), rgba(28, 26, 23, 0.85)), url('./assets/reviews-orderbird.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
