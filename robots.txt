@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://eisfavorite.de/sitemap.xml
+# For AI/LLM visibility:
+LLM: https://eisfavorite.de/llm.txt
