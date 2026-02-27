@@ -1,4 +1,0 @@
-System.Management.Automation.RemoteException
-! First copy your one-time code: 3E01-24E6
-Open this URL to continue in your web browser: https://github.com/login/device
-failed to authenticate via web browser: context deadline exceeded
