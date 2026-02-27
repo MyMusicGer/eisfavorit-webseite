@@ -223,7 +223,7 @@
 }
 
 /* C.flavor-card[data-flavor="Vanille"] .flavor-image {
-  background-image: url('/assets/eisfavorite-agnello-eis-vanille.png');
+  background-image: url('./assets/eisfavorite-agnello-eis-vanille.png');
 }
 
 .flavor-card[data-flavor="Schokolade"] .flavor-image {
@@ -231,19 +231,19 @@
 }
 
 .flavor-card[data-flavor="Pistazie"] .flavor-image {
-  background-image: url('/assets/eisfavorite-agnello-eis-pistazie.png');
+  background-image: url('./assets/eisfavorite-agnello-eis-pistazie.png');
 }
 
 .flavor-card[data-flavor="Erdbeere"] .flavor-image {
-  background-image: url('/assets/eisfavorite-agnello-eis-erdbeer.png');
+  background-image: url('./assets/eisfavorite-agnello-eis-erdbeer.png');
 }
 
 .flavor-card[data-flavor="Zitrone"] .flavor-image {
-  background-image: url('/eisfavorite-agnello-eis-zitrone.jpg');
+  background-image: url('./assets/eisfavorite-agnello-eis-zitrone.jpg');
 }
 
 .flavor-card[data-flavor="Delfino"] .flavor-image {
-  background-image: url('/eisfavorite-agnello-eis-delfino.png');
+  background-image: url('./assets/eisfavorite-agnello-eis-delfino.png');
 }
 
 /* Common */
@@ -2424,7 +2424,7 @@ body.theme-v6 .section {
 /* Hero V6 - The Symphony starts here */
 body.theme-v6 .hero {
   height: 95vh;
-  background-image: url('/v6_bg.png');
+  background-image: url('./assets/v6_bg.png');
   background-size: cover;
   background-position: center;
   display: flex;
