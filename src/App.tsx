@@ -429,6 +429,7 @@ function MainContent() {
   const [formError, setFormError] = useState('');
   const [cardsPerView, setCardsPerView] = useState(3);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const [todayDate, setTodayDate] = useState('');
 
@@ -561,22 +562,31 @@ function MainContent() {
             <div className="logo text-gold">EISFAVORITE</div>
             <div className="logo-subtitle">agnello</div>
           </div>
-          <div className="nav-links">
-            <a href="#flavors">Sorten</a>
-            <a href="#events">Catering</a>
-            <a href="#calculator">Planer</a>
-            <a href="#process">Ablauf</a>
-            <a href="#reviews">Bewertungen</a>
-            <a href="#faq">FAQ</a>
+          <div className={`nav-links ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
+            <a href="#flavors" onClick={() => setIsMobileMenuOpen(false)}>Sorten</a>
+            <a href="#events" onClick={() => setIsMobileMenuOpen(false)}>Catering</a>
+            <a href="#calculator" onClick={() => setIsMobileMenuOpen(false)}>Planer</a>
+            <a href="#process" onClick={() => setIsMobileMenuOpen(false)}>Ablauf</a>
+            <a href="#reviews" onClick={() => setIsMobileMenuOpen(false)}>Bewertungen</a>
+            <a href="#faq" onClick={() => setIsMobileMenuOpen(false)}>FAQ</a>
             <MagneticWrapper>
               <button
-                onClick={() => { setIsBookingOpen(true); setBookingStep(1); setIsSubmitted(false); }}
+                onClick={() => { setIsBookingOpen(true); setBookingStep(1); setIsSubmitted(false); setIsMobileMenuOpen(false); }}
                 className="btn btn-primary nav-btn"
               >
                 Anfragen
               </button>
             </MagneticWrapper>
           </div>
+          <button
+            className={`hamburger-menu ${isMobileMenuOpen ? 'active' : ''}`}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
       </nav>
 
