@@ -2258,3 +2258,246 @@ body.theme-v4 #reviews .section-title {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* ===========================================
+   MOBILE RESPONSIVE OVERHAUL
+   All fixes for screens under 768px
+   =========================================== */
+
+@media (max-width: 768px) {
+
+  /* === GENERAL === */
+  .container {
+    padding: 0 16px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 1.8rem !important;
+    letter-spacing: -1px !important;
+  }
+
+  .py-large {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  /* === HERO === */
+  .hero {
+    padding-top: 100px;
+    min-height: 70vh;
+    height: auto;
+    align-items: flex-start;
+  }
+
+  body.theme-v4 .hero-title {
+    font-size: clamp(1.8rem, 10vw, 3rem) !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    -webkit-text-stroke: 1px #252A34;
+    text-shadow: 4px 4px 0px #252A34;
+  }
+
+  body.theme-v4 .hero-subtitle {
+    font-size: 0.9rem;
+    padding: 12px 20px;
+    min-width: unset;
+    width: 90%;
+    bottom: 15px;
+  }
+
+  /* === NAVBAR V4 === */
+  body.theme-v4 .navbar {
+    top: 12px;
+    width: 92%;
+    max-width: 92%;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border-width: 3px !important;
+    box-shadow: 4px 4px 0px #252A34 !important;
+  }
+
+  body.theme-v4 .navbar .logo {
+    font-size: 1rem !important;
+  }
+
+  .logo-subtitle {
+    font-size: 0.55rem;
+  }
+
+  /* === FLAVOR GRID === */
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    padding: 20px 0;
+    margin-top: 30px;
+  }
+
+  .grid-item {
+    padding: 20px 14px;
+  }
+
+  .flavor-image {
+    height: 110px;
+    width: 110px;
+  }
+
+  /* === SPECIALTY CARDS === */
+  .specialties-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+
+  .specialty-card {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    padding: 25px 20px;
+  }
+
+  .specialty-card .flavor-image {
+    height: 140px;
+    width: 140px;
+  }
+
+  /* === EVENTS GRID === */
+  .events-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .event-card {
+    padding: 24px 20px;
+  }
+
+  /* === EVENT HIGHLIGHT CARDS === */
+  .event-cards-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .event-highlight-card--featured {
+    transform: none !important;
+  }
+
+  /* === PROCESS STEPS === */
+  .process-svg {
+    display: none;
+  }
+
+  /* === CALCULATOR === */
+  .calculator-card {
+    padding: 24px 16px;
+  }
+
+  .calc-results {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  /* === FAQ === */
+  .faq-list {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-question {
+    font-size: 0.95rem;
+    padding: 16px 18px;
+  }
+
+  /* === FOOTER === */
+  .footer {
+    padding: 60px 16px 30px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  /* === REVIEWS === */
+  .slider-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  /* === BOOKING MODAL === */
+  .modal-content {
+    width: 96%;
+    max-height: 90vh;
+  }
+
+  .modal-header {
+    padding: 20px;
+  }
+
+  .modal-header h3 {
+    font-size: 1.6rem;
+  }
+
+  .modal-body {
+    padding: 20px;
+  }
+
+  .form-navigation {
+    flex-direction: column;
+  }
+
+  .step-indicator {
+    gap: 15px;
+  }
+}
+
+/* Extra small screens (< 480px) */
+@media (max-width: 480px) {
+
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .grid-item {
+    padding: 16px 10px;
+  }
+
+  .flavor-image {
+    height: 90px;
+    width: 90px;
+  }
+
+  .grid-item h3 {
+    font-size: 0.9rem;
+  }
+
+  .event-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.theme-v4 .section-title {
+    font-size: 1.6rem !important;
+  }
+
+  .specialties-container {
+    padding: 0 8px;
+  }
+
+  .specialty-card {
+    max-width: 100%;
+  }
+
+  .footer-grid {
+    gap: 20px;
+  }
+}
